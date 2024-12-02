@@ -28,7 +28,13 @@ const UserComparisonCard: React.FC<UserComparisonProps> = ({ label, users }) => 
 
 const DashboardPage: React.FC = () => {
     return (
-        <div className="mt-16 p-6 md:p-10 shadow-inner">
+        <>
+        <div className='flex justify-between'>
+
+        <h2>Insights</h2>
+        <img className='rounded-xl w-10' src="https://amento-bucket-poc-2.s3.amazonaws.com/thumbnails/profile_images/Msbqe1728390739-34x34.png" alt="" />
+        </div>
+        <div className="mt-10 p-6 md:p-10 shadow-inner">
             <section>
                 <h2 className="text-xl font-bold">Revenue & Payment Metrics</h2>
                 <p className="mb-8">Track and manage your income effortlessly.</p>
@@ -73,6 +79,7 @@ const DashboardPage: React.FC = () => {
                 </div>
             </section>
         </div>
+        </>
     );
 };
 
