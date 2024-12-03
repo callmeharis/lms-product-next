@@ -1,10 +1,11 @@
+import Link from 'next/link';
 import React from 'react';
 import { FaChartBar, FaUser, FaSignOutAlt } from 'react-icons/fa';
 
 const Sidebar = () => {
     const menuItems = [
-        { name: 'Insights', icon: <FaChartBar />, path: '#' },
-        { name: 'Site Management', icon: <FaChartBar />, path: '#' },
+        { name: 'Insights', icon: <FaChartBar />, path: '/admin' },
+        { name: 'Site Management', icon: <FaChartBar />, path: '' },
         { name: 'Taxonomies', icon: <FaChartBar />, path: '#' },
         { name: 'Language Translations', icon: <FaChartBar />, path: '#' },
         { name: 'Manage Addons', icon: <FaChartBar />, path: '#' },
@@ -30,6 +31,9 @@ const Sidebar = () => {
                         <li key={index} className="flex items-center p-3 hover:bg-green-800  cursor-pointer hover:text-white">
                             {item.icon && <span className="mr-3">{item.icon}</span>}
                             <span className="text-gray-700 w-full hover:text-white">{item.name}</span>
+                            <Link href={item.path}>
+                                {/* <a className="block p-2 rounded-md hover:bg-green-600">{item.name}</a> */}
+                            </Link>
                         </li>
                     ))}
                 </ul>
